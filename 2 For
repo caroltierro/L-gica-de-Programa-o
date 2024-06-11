@@ -1,0 +1,128 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+main (){
+char turno, curso;
+float turno1=0, renda1=0,renda =0, media, turno2 = 0, turno3 = 0, media2, media3, renda2=0, renda3=0;
+int idade, familia, i, qnte=0, qnth=0, qntb=0,nfam1=0,nfam2=0,nfam3=0,nfam4=0,nfam5=0,nfam6=0, nfam =0, continuar;
+
+for (i=1;continuar>0;i++){
+
+printf ("\n QUAL SUA IDADE:");
+scanf ("%i", &idade);
+
+printf ("\n QUAL TURNO FREQUENTADO: M (manha), T (tarde) e N (noite):");
+fflush(stdin);
+turno=getchar();
+
+printf ("\n QUAL A AREA DO SEU CURSO: E (exatas), H (humanas) e B (biologicas):");
+fflush(stdin);
+curso= getchar();
+
+printf ("\n QUAL SUA RENDA FAMILIAR:");
+scanf ("%f", &renda);
+
+printf ("\n INCLUINDO VC, QUANTAS PESSOAS FAZEM PARTE DA SUA FAMILIA:");
+scanf ("%d", &familia);
+
+switch (turno){
+case 'M':
+turno1 = turno1 + 1;
+renda1 = renda1 + renda;
+media = (renda1 / turno1);
+break;
+
+case 'T':
+turno2 = turno2 + 1;
+renda2 = renda2 + renda;
+media2 = (renda2 / turno2);
+break;
+
+case 'N':
+turno3 = turno3 + 1;
+renda3 = renda3 + renda;
+media3 = (renda3 / turno3);
+break;
+}
+
+switch (familia){
+
+case 1:
+nfam1 = nfam1 + 1;
+break;
+
+    case 2:
+nfam2 = nfam2 + 1;
+break;
+
+    case 3:
+nfam3 = nfam3 + 1;
+break;
+
+    case 4:
+nfam4 = nfam4 + 1;
+break;
+
+case 5:
+nfam5 = nfam5 + 1;
+break;
+
+case 6:
+    nfam6 = nfam6 + 1;
+    break;
+   
+       default:
+    nfam = nfam +1;
+    break;
+}
+
+switch (curso){
+case 'E':
+if ((idade >= 18) && (idade <= 22) && (familia >= 3) && (familia <= 4 && renda > 1800)){
+qnte = qnte + 1;
+}
+break;
+case 'H':
+if ((idade >= 18) && (idade <= 22) && (familia >= 3) && (familia <= 4 && renda > 1800)){
+qnth = qnth + 1;
+}
+break;
+case 'B':
+if ((idade >= 18) && (idade <= 22) && (familia >= 3) && (familia <= 4 && renda > 1800)){
+qntb = qntb + 1;
+}
+break;
+}
+
+printf ("-----------------------------------------------------------------------------------");
+
+printf ("\n DESEJESA CONTINUAR: SIM (1) NAO(0)");
+scanf ("%i",&continuar);
+
+    printf ("-----------------------------------------------------------------------------------");
+
+}
+
+
+
+ printf ("\n RESULTADO DA PESQUISA \n");
+
+if ((media > media2)&& (media > media3)){
+printf ("\n ENTRE OS TURNOS A MAIOR MEDIA DE RENDA FAMILIAR EH A MANHA COM: RS%2.0f\n", media);
+
+ }else if ((media2 > media) && (media2 > media3)){
+ printf ("\n ENTRE OS TURNOS A MAIOR MEDIA DE RENDA FAMILIAR EH A TARDE COM: RS%2.0f\n", media2);
+ 
+ }else if ((media3 > media) && (media3 > media2)){
+ printf ("\n ENTRE OS TURNOS A MAIOR MEDIA DE RENDA FAMILIAR EH A NOITE COM: RS%2.0f\n", media3);
+}
+
+
+printf ("\n ENTREVISTADOS CUJA IDADE ESTA ENTRE 18 E 22 ANOS \n QUE POSSUEM FAMILIA ENTRE 3 E 4 PESSOAS \n E COM A RENDA FAMILIAR ACIMA DE RS1.800 \n HUMANAS: %i \n EXATAS: %i \n BIOLOGICAS: %i \n",qnth, qnte, qntb);
+
+printf ("\n ENTREVISTADOS QUE POSSUEM: \n 1 MEMBRO NA FAMILIA: %i \n 2 MEMBROS: %i \n 3 MEMBROS: %i \n 4 MEMBROS: %i \n 5 MEMBROS: %i \n 6 MEMBROS: %i \n MAIS QUE 6 MEMBROS: %i", nfam1,nfam2,nfam3,nfam4,nfam5,nfam6, nfam);
+
+
+}
+
