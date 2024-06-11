@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+
+    float KGmorango;
+    float KGmaca;
+    float valormorango;
+    float valormaca;
+    float peso;
+    float valor;
+
+
+printf ("Quantos quilos de morango foram comprados");
+scanf ("%f", &KGmorango);
+
+printf ("Quantos quilos de maca foram comprados");
+scanf ("%f", &KGmaca);
+
+  if ((KGmorango > 5) && (KGmaca > 5)){
+   valormorango = KGmorango * 2.20;
+   valormaca = KGmaca * 1.50;
+
+  }
+  else if ((KGmorango <= 5) && (KGmaca <= 5)){
+  valormorango = KGmorango * 2.50;
+  valormaca = KGmaca * 1.80;
+
+  }
+  else if ((KGmorango > 5) && (KGmaca <= 5)) {
+   valormorango = KGmorango * 2.20;
+   valormaca = KGmaca * 1.80;
+   }
+  else{
+       valormorango = KGmorango * 2.50;
+       valormaca = KGmaca * 1.50;
+   }
+
+   valor = valormorango + valormaca;
+   peso = KGmorango + KGmaca;
+
+
+   if ((valor > 25) || (peso > 8))
+     printf (" O cliente recebeu 10%% de desconto \n Foram comprados %.1f quilos de frutas \n O valor total da compra com o desconto ficou %.2f reais ", peso, valor - valor * 0.1);
+
+     else
+        printf (" O valor total da compra ficou %.1f reais \n Foram comprados %.1f quilos de fruta ", valor, peso);
+
+        system ("pause");
+}
