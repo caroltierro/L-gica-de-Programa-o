@@ -1,0 +1,91 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main (){
+	
+	int cand1, cand2, cand3, cand4, nulo, branco, i;
+	int voto;
+	cand1=cand2= cand3= cand4=nulo= branco=i = 0;
+
+    
+//i=0;
+
+ do {
+ 	printf ("ESCOLHA UMA OPCAO\n CANDIDATO - 1 \n CANDIDATO - 2 \n CANDIDATO - 3 \n CANDIDATO - 4 \n OU \n NULO - 5 \n BRANCO - 6 ");
+    scanf ("%i", &voto);
+   switch (voto) {
+   	case 1:
+   	cand1 = cand1 + 1;
+   	break; 
+   
+    case 2:
+   	cand2 = cand2 + 1;
+	break;
+   
+   case 3:
+   	cand3 = cand3 + 1;
+	break;
+   
+   case 4:
+   	cand4 = cand4 + 1;
+	break;
+   
+   case 5:
+   	nulo = nulo + 1;
+	break;
+   
+   case 6:
+   	branco = branco + 1;
+	break;
+   }
+
+//   i++;
+}
+   while (voto>=1);
+printf ("\n VOTOS NULOS; %i \n VOTOS EM BRANCO; %i \n CANDIDATO 1 ; %i \n CANDIDATO 2: %i \n CANDIDATO 3: %i \n CANDIDATO 4: %i \n", nulo, branco, cand1, cand2, cand3, cand4);
+
+  if ((cand1 == cand2) && (cand2 == cand3) && (cand3 == cand4)) {
+  printf ("TODOS OS CANDIDATOS ESTAO EMPATADOS");
+  
+  }else if(cand1 == cand2) {
+    printf("O candidato 1 empatou com o 2\n");
+    }
+  else if (cand1 == cand3) {
+    printf("O candidato 1 empatou com o 3\n");
+  }
+  else if (cand1 == cand4) {
+    printf("O candidato 1 empatou com o 4\n");
+  }
+    else if (cand2 == cand3) {
+    printf("O candidato 2 empatou com o 3\n");
+  }
+  else if (cand2 == cand4) {
+    printf("O candidato 2 empatou com o 4\n");
+  }
+  
+  else if(cand3 > 0) {
+    if (cand3 == cand1) {
+    printf("O candidato 3 empatou com o 1\n");
+  }
+  else if (cand3 == cand2) {
+    printf("O candidato 3 empatou com o 2\n");
+  }
+  else if (cand3 == cand4) {
+    printf("O candidato 3 empatou com o 4\n");
+  }
+      }
+  else if(cand4 > 0) {
+    printf("O candidato 4 empatou com o 1\n");
+  }
+  else if (cand4 == cand2) {
+    printf("O candidato 4 empatou com o 2\n");
+  }
+  else if (cand4 == cand3) {
+  	printf ("CANDIDATO4 EMPATADO COM 3");
+  }
+
+system ("pause");	
+}
+
+
+
