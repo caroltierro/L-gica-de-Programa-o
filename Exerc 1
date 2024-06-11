@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main () {
+	
+	float litros;
+	float vendido; 
+	float vendas;
+	float vendas1;
+	
+	printf ("qual o numero em litros de leite produzido esse mes");
+	scanf ("%f", &litros);
+	
+	printf ("qual foi a quantia vendida");
+	scanf ("%f", &vendido);
+
+    vendas = 2.20 * vendido;
+	vendas1 = 2.50 * vendido;	
+	
+	if (litros < 1000) {
+		printf ("O valor total de vendas %2.f", vendas1 );
+		
+	}else{
+		printf ("o valor total de vendas %2.f", vendas);
+	}
+	system ("pause");
+	}
