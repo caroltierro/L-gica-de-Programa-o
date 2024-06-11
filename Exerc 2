@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+  main () {
+	float vendas;
+	float vendas50;
+	float vendas30;
+	float restante;
+
+	printf ("Informe o valor de vendas do corretor");
+	scanf ("%f", &vendas);
+	
+	vendas50 = (vendas * 0.12) + vendas;
+	vendas30 = (vendas * 0.095) + vendas;
+	restante = (vendas * 0.07) + vendas;
+
+    if (vendas > 50000){
+    	printf ("A comissao do corretor e de 12%% \na venda com a comissao %5.f", vendas50);
+    	
+	}else if ( vendas >= 30000 && vendas <= 50000) {
+	    printf ("A comissao do corretor e de 9.5%% \na venda com a comissao %5.f", vendas30);
+	    
+		}else{
+			printf ("A comissao e de 7%% \na venda com a comissao %5.f",restante); 
+		}
+    
+    
+	
+	system ("pause");
+	
+	}
