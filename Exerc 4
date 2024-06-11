@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+ main () {
+ 	
+  int gasolina=1;
+  int alcool=2;
+  int combustivel;
+  float desconto1;
+  float desconto2;
+  float litros;
+  float ttpagar;
+
+  printf (" Qual foi o tipo de combustivel abastecido pelo cliente \n 1-Gasolina 2-Alcool\n");
+  scanf ("%i", &combustivel);
+  printf (" Quantos litros o cliente abasteceu\n");
+  scanf ("%f", &litros);
+
+  if (combustivel == gasolina){
+  	
+    if (litros <= 20){
+      ttpagar = litros * 6.74 - (litros * 6.74 * 0.03);
+      
+    }else{
+      desconto1 = (20 * 6.74) * 0.97;
+      desconto2 = (litros - 20) * 6.74 * 0.95;
+      ttpagar = desconto1 + desconto2;
+    }
+    
+  }else{
+    if (litros <= 15) {
+      ttpagar = litros * 4.99 - (litros * 4.99 * 0.04);
+      
+    }else {
+      desconto1 = 15 * 4.99 - (15 * 4.99 * 0.04);
+      desconto2 = (litros - 15) * 4.99 - (litros - 15) * 4.99 * 0.06;
+      ttpagar = desconto1 + desconto2;
+    }
+  }
+  printf (" \n O valor a ser pago e de %.2f reais\n", ttpagar);
+  
+  system ("pause");
+}
